@@ -223,8 +223,6 @@ public class Editor extends javax.swing.JFrame {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        }else{
-            JOptionPane.showMessageDialog(null, "Dede seleciones uno de los botones para continuar. ");
         }
         
     }//GEN-LAST:event_jButton2ActionPerformed
