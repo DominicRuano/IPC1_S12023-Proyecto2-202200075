@@ -1,4 +1,4 @@
-package proyecto2;
+package proyecto2.Paquetes;
 /* NO CAMBIE EL CODIGO DE ESTA CLASE */
 
 import java.io.Serializable;

@@ -1,4 +1,6 @@
-package proyecto2;
+package proyecto2.Paquetes;
+
+import proyecto2.Paquetes.ImageHandler;
 
 
 /**
