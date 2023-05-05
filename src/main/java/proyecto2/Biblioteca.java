@@ -188,23 +188,18 @@ public class Biblioteca extends javax.swing.JFrame {
 
     private void jToggleButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton3ActionPerformed
         // TODO add your handling code here:
-            // abrir el explorador de archivos
                 JFileChooser fileChooser = new JFileChooser();
                 fileChooser.setMultiSelectionEnabled(true);
-                // seleccionar la imagen
                 int seleccion = fileChooser.showOpenDialog(this);
 
                 if (seleccion == JFileChooser.APPROVE_OPTION) {
-                    // Agregar la imagen a la lista
                     File[] Imagenes = fileChooser.getSelectedFiles();
                     
                     for (File Imagene : Imagenes) {
                         Proyecto2.listaDoble.add(Imagene.getAbsolutePath());
 
                     }
-                    // actualiza nuestro nodo actual al ultimo nodo agregado
                     imagenActual = (Nodo) Proyecto2.listaDoble.peek();
-                    // Agregar la imagen al jlabel
                     ruta = fileChooser.getSelectedFile().getAbsolutePath();
                     
                     Image imagen = new ImageIcon(ruta).getImage();
@@ -240,11 +235,9 @@ public class Biblioteca extends javax.swing.JFrame {
 
     private void jToggleButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton7ActionPerformed
         // TODO add your handling code here:
-        // si imagen actual es null no hacer nada porque no se han agregado imagenes a la lista doble
                 if (imagenActual == null) {
                     return;
                 }
-                // si el nodo actual tiene anterior se coloca el anterior
                 if (imagenActual.getSiguiente()!= null) {
                     imagenActual = imagenActual.getSiguiente();
                     
@@ -258,11 +251,9 @@ public class Biblioteca extends javax.swing.JFrame {
 
     private void jToggleButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton6ActionPerformed
         // TODO add your handling code here:
-        // si imagen actual es null no hacer nada porque no se han agregado imagenes a la lista doble
         if (imagenActual == null) {
             return;
         }
-        // si el nodo actual tiene anterior se coloca el anterior
         if (imagenActual.getAnterior() != null) {
             imagenActual = imagenActual.getAnterior();            
             

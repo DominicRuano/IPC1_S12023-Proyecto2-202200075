@@ -41,6 +41,7 @@ public class MenuInicial extends javax.swing.JFrame {
         jToggleButton3 = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Menu inicial");
 
         jLabel1.setText("Usac Viewer");
 
