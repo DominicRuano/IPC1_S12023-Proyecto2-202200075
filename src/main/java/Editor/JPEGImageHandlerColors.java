@@ -25,6 +25,7 @@ public class JPEGImageHandlerColors extends ImageHandler{
     @Override
     public void readFile() throws Exception {
         
+        System.out.println("Imagen: " + this.handledFileName);
         File file = new File(this.handledFileName);
         bi = ImageIO.read(file);
         
@@ -80,28 +81,28 @@ public class JPEGImageHandlerColors extends ImageHandler{
         int indexBarra = this.handledFileName.lastIndexOf("\\");
         int indexPunto = this.handledFileName.lastIndexOf(".");
         
-        String nombreRojo = this.handledFileName.substring(indexBarra,indexPunto)+"-Rojo.bmp";
+        String nombreRojo = this.handledFileName.substring(indexBarra,indexPunto)+"-Rojo.jpg";
         File nuevoArchivoRojo = new File("./Temporal/" + nombreRojo);          
         new File(nuevoArchivoRojo.getParent()).mkdirs();
-        ImageIO.write(bi, "bmp", nuevoArchivoRojo);
+        ImageIO.write(copiaRoja, "jpg", nuevoArchivoRojo);
         
         
-        String nombreazul = this.handledFileName.substring(indexBarra,indexPunto)+"-Azul.bmp";
+        String nombreazul = this.handledFileName.substring(indexBarra,indexPunto)+"-Azul.jpg";
         File nuevoArchivoAzul = new File("./Temporal/" + nombreazul);          
         new File(nuevoArchivoAzul.getParent()).mkdirs();
-        ImageIO.write(bi, "bmp", nuevoArchivoAzul);
+        ImageIO.write(copiaAzul, "jpg", nuevoArchivoAzul);
         
         
-        String nombreVerde = this.handledFileName.substring(indexBarra,indexPunto)+"-Verde.bmp";
+        String nombreVerde = this.handledFileName.substring(indexBarra,indexPunto)+"-Verde.jpg";
         File nuevoArchivoVerde = new File("./Temporal/" + nombreVerde);           
         new File(nuevoArchivoVerde.getParent()).mkdirs();
-        ImageIO.write(bi, "bmp", nuevoArchivoVerde);
+        ImageIO.write(copiaVerde, "jpg", nuevoArchivoVerde);
         
         
-        String nombreSepia = this.handledFileName.substring(indexBarra,indexPunto)+"-Sepia.bmp";
+        String nombreSepia = this.handledFileName.substring(indexBarra,indexPunto)+"-Sepia.jpg";
         File nuevoArchivoSepia = new File("./Temporal/" + nombreSepia);           
         new File(nuevoArchivoSepia.getParent()).mkdirs();
-        ImageIO.write(bi, "bmp", nuevoArchivoSepia);
+        ImageIO.write(copiaSepia, "jpg", nuevoArchivoSepia);
         
     }
     

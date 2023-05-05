@@ -5,12 +5,15 @@
 package proyecto2;
 
 import Editor.JPEGImageCopy;
+import Editor.JPEGImageHandlerBN;
 import Editor.JPEGImageHandlerColors;
+import Editor.JPEGImageHandlerRotator;
 import Editor.JPEGtoBMPImage;
 import java.awt.Image;
 import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import proyecto2.Lista.Nodo;
 import proyecto2.Paquetes.JPEGHandler;
 
@@ -118,7 +121,7 @@ public class Editor extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
-                .addContainerGap())
+                .addGap(22, 22, 22))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -140,9 +143,9 @@ public class Editor extends javax.swing.JFrame {
                         .addGap(31, 31, 31)
                         .addComponent(jButton2))
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1)
-                .addContainerGap())
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         pack();
@@ -206,8 +209,22 @@ public class Editor extends javax.swing.JFrame {
             try {
                 JPEGHandler.runHandler(new JPEGImageHandlerColors(filename));
             } catch (Exception e) {
-            
+                e.printStackTrace();
             }
+        }if (jRadioButton4.isSelected()) {
+            try {
+                JPEGHandler.runHandler(new JPEGImageHandlerRotator(filename));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }if (jRadioButton5.isSelected()) {
+            try {
+                JPEGHandler.runHandler(new JPEGImageHandlerBN(filename));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Dede seleciones uno de los botones para continuar. ");
         }
         
     }//GEN-LAST:event_jButton2ActionPerformed

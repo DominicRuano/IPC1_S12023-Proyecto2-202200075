@@ -138,7 +138,14 @@ public class MenuInicial extends javax.swing.JFrame {
 
     private void jToggleButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton2ActionPerformed
         // TODO add your handling code here:
-                System.out.println("boto4");
+        
+        this.dispose();
+            
+            Convertidor q = new Convertidor();
+            q.setVisible(true);
+            q.setLocationRelativeTo(null);
+        
+        
     }//GEN-LAST:event_jToggleButton2ActionPerformed
 
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed

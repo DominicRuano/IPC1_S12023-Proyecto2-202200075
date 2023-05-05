@@ -22,7 +22,7 @@ public class Funciones {
             System.out.println("Imagen: " + (actual.getDato()));
         }
         actual = actual.getSiguiente();
-        }
+    }
     }
     
     

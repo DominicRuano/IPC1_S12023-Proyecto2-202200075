@@ -14,6 +14,7 @@ import proyecto2.Lista.Nodo;
  */
 public class Proyecto2 {
     public static ListaDoble listaDoble = new ListaDoble();
+    public static ListaDoble listaDoble1 = new ListaDoble();
     public static ListaSimple lista = new ListaSimple();
 
     public static void main(String[] args) {

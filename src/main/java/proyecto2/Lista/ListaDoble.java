@@ -39,7 +39,7 @@ public class ListaDoble extends EstructuraDeDatos{
     @Override
     public Object peek() {
         // retornar el inicio de la lista
-        return fin;
+        return inicio;
     }
 
     @Override
